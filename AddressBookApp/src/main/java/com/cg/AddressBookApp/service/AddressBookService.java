@@ -20,7 +20,7 @@ public class AddressBookService {
         this.addressBookRepository = addressBookRepository;
     }
 
-    // Convert AddressBook entity to AddressBookDTO
+    //Convert AddressBook entity to AddressBookDTO
     private AddressBookDTO convertToDTO(AddressBookModel addressBook) {
         return new AddressBookDTO(
                 addressBook.getId(),
@@ -42,7 +42,7 @@ public class AddressBookService {
         return addressBook;
     }
 
-    // Get all address entries
+    //Get all address entries
     public List<AddressBookDTO> getAllAddresses() {
         List<AddressBookModel> addresses = addressBookRepository.findAll();
         return addresses.stream()
